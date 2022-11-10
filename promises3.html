@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    1.promises = create problem 2.async await =for clean code
+  </body>
+</html>
+<script>
+  const promise = new Promise(function (resolve, reject) {
+    const string1 = "suyognagawad";
+    const string2 = "suyognagawade";
+    if (string1 === string2) {
+      resolve("success");
+    } else {
+      reject("promise error");
+    }
+  });
+  //   promise
+  //     .then((data) => {
+  //       console.log("@SN resolve:=" + data);
+  //     })
+  //     .catch((data) => {
+  //       console.log("@SN reject:=" + data);
+  //     });
+
+  const promise2 = async () => {
+    try {
+      const result = await promise;
+      console.log("AsyncAwait:" + result);
+    } catch (error) {
+      console.log("@SN " + error);
+    }
+  };
+
+  promise2();
+</script>
